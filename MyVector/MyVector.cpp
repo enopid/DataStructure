@@ -95,7 +95,7 @@ public:
     }
 
     //utility
-    void Print(bool printElements=true){
+    void print(bool printElements=true){
         std::cout << "Size : " << _size << " / Capacity : " << _capacity << "\n";
         if (printElements){
             std::cout << "elements : ";

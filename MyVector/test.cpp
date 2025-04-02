@@ -3,13 +3,13 @@
 void TestGeometricGrowth(){
     MyVector<int> myvector = MyVector<int>();
     std::cout << "Vector geometric growth check" <<"\n";
-    myvector.Print(false);
+    myvector.print(false);
     for (size_t i = 0; i < 100; i++)
     {
         myvector.push_back(i);
         if (i%10==0){
             std::cout << "After pushing back " << i <<"\n";
-            myvector.Print(false);
+            myvector.print(false);
         }
     }
     std::cout <<"\n";
@@ -18,25 +18,25 @@ void TestGeometricGrowth(){
 void TestSizeManipulation(){
     std::cout << "Vector size manipulation check" <<"\n";
     MyVector<int> myvector = MyVector<int>(10,5);
-    myvector.Print();
+    myvector.print();
     std::cout << "Resize to 5" <<"\n";
     myvector.resize(5);
-    myvector.Print();
+    myvector.print();
     std::cout << "Resize to 10" <<"\n";
     myvector.resize(10);
-    myvector.Print();
+    myvector.print();
     std::cout << "Resize to 15 with 3" <<"\n";
     myvector.resize(15,3);
-    myvector.Print();
+    myvector.print();
     std::cout << "Reserve to 20" <<"\n";
     myvector.reserve(20);
-    myvector.Print();
+    myvector.print();
     std::cout << "fit vector capacity" <<"\n";
     myvector.shrink_to_fit();
-    myvector.Print();
+    myvector.print();
     std::cout << "clear" <<"\n";
     myvector.clear();
-    myvector.Print();
+    myvector.print();
 }
 
 void TestSizeManipulation1(int n){
