@@ -1,0 +1,206 @@
+{
+  "main": {
+    "id": "d5a6ffd1328ccbae",
+    "type": "split",
+    "children": [
+      {
+        "id": "8740b78cca95764b",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "76bf75815f26dd51",
+            "type": "leaf",
+            "state": {
+              "type": "graph",
+              "state": {},
+              "icon": "lucide-git-fork",
+              "title": "그래프 뷰"
+            }
+          },
+          {
+            "id": "2e38bff2734c74d1",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "01.vector.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "01.vector"
+            }
+          }
+        ],
+        "currentTab": 1
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "9e9ec1132abfbaa6",
+    "type": "split",
+    "children": [
+      {
+        "id": "fe3f1b887a10da35",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "8b9f10d6898bf150",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "파일 탐색기"
+            }
+          },
+          {
+            "id": "cf72fe8541f4afbf",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "검색"
+            }
+          },
+          {
+            "id": "c9437c3f989e01b3",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "북마크"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "88147cb15bccf2a7",
+    "type": "split",
+    "children": [
+      {
+        "id": "b9cec2391ca9536f",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "44c15cf4a88a40af",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "01.vector.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "01.vector 의 백링크"
+            }
+          },
+          {
+            "id": "7198c49024059a4e",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "01.vector.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "01.vector 의 나가는 링크"
+            }
+          },
+          {
+            "id": "5e40431a733c34ac",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "태그"
+            }
+          },
+          {
+            "id": "674f9234f98cfe20",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "01.vector.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "01.vector 의 개요"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:빠른 전환기 열기": false,
+      "graph:그래프 뷰 열기": false,
+      "canvas:새 캔버스 만들기": false,
+      "daily-notes:오늘의 일일 노트 열기": false,
+      "templates:템플릿 삽입": false,
+      "command-palette:명령어 팔레트 열기": false
+    }
+  },
+  "active": "2e38bff2734c74d1",
+  "lastOpenFiles": [
+    "99.data/5a9b09c1",
+    "99.data/29590914",
+    "99.data/3dc508b2",
+    "99.data/2f3b075e",
+    "99.data/19aa06f9",
+    "99.data/77d906cf",
+    "99.data/560806a4",
+    "99.data/vector_image/슬라이드3.PNG",
+    "99.data/vector_image/슬라이드2.PNG",
+    "99.data/vector_image/슬라이드1.PNG",
+    "99.data/vector_image",
+    "99.data/~$vector_image.odp",
+    "99.data/vector_image.odp",
+    "99.data/새 OpenDocument 프레젠테이션.odp",
+    "99.data/vetor_elapsedTimeGraph(line).png",
+    "99.data/vetor_elapsedTimeGraph.png",
+    "99.data/vetor_elapsedTimeGraph(log).png",
+    "99.data/vetor_elapsedTimeTable.png",
+    "99.data/vetor_geomtricGrowth.png",
+    "01.vector.md",
+    "환영합니다!.md"
+  ]
+}

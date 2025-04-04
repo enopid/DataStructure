@@ -25,26 +25,26 @@ public:
     T* data(){return _data;}
 
     //capacity modification
-    void resize(int _size){
-        if (_capacity<_size){reserve(_size);}
-        for (int i = _size; i < _size; i++) _data[i]=T();
-        _size=_size;
+    void resize(int newsize){
+        if (_capacity< newsize){reserve(newsize);}
+        for (int i = _size; i < newsize; i++) _data[i]=T();
+        _size= newsize;
     }
-    void resize(int _size, const T& val){
-        if (_capacity<_size){reserve(_size);}
-        for (int i = _size; i < _size; i++) _data[i]=val;
-        _size=_size;
+    void resize(int newsize, const T& val){
+        if (_capacity< newsize){reserve(newsize);}
+        for (int i = _size; i < newsize; i++) _data[i]=val;
+        _size= newsize;
     }
     void clear(){_size=0;}
     bool empty(){return (_size==0);}
-    void reserve(int _capactiy){
-        if (_capacity<_capactiy){
-            T* _containerPtr=new T[_capactiy];
-            memcpy(_containerPtr,_data, sizeof(T)*_capacity);
+    void reserve(int newcapacity){
+        if (_capacity < newcapacity) {
+            T* newData = new T[newcapacity];
+            memcpy(newData, _data, sizeof(T) * _size);
+            //for (int i = 0; i < _size; ++i) newData[i] = _data[i];
             delete[] _data;
-            _data=_containerPtr;
-
-            _capacity=_capactiy;
+            _data = newData;
+            _capacity = newcapacity;
         }
     }
     void shrink_to_fit(){
@@ -56,6 +56,9 @@ public:
 
             _capacity=_size;
         }
+    }
+    static void set_growth_factor(double growth_factor) {
+        _growthFactor = growth_factor;
     }
 
     //element manipulation
@@ -75,7 +78,7 @@ public:
         if (!empty()){_size--;}
     }
     void push_back(const T& val){
-        if (_size>=_capacity){reserve(_capacity*2);}
+        if (_size >= _capacity) { reserve(std::max(int(_capacity * _growthFactor),2)); }
         _data[_size++]=val;
     }
     void linear_push_back(const T& val){
@@ -108,6 +111,10 @@ public:
 private:
     int _size;
     int _capacity;
+    static double _growthFactor;
     T *_data;
 };
+
+template<typename T>
+double MyVector<T>::_growthFactor = 2;
 

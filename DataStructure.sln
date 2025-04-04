@@ -5,6 +5,8 @@ VisualStudioVersion = 17.7.34031.279
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "MyVector", "MyVector\MyVector.vcxproj", "{745EB4A0-E6AD-462D-9728-D1553E741E8E}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Utility", "Utility\Utility.vcxproj", "{503665E7-9183-4E6C-A823-9421519A5A82}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -21,6 +23,14 @@ Global
 		{745EB4A0-E6AD-462D-9728-D1553E741E8E}.Release|x64.Build.0 = Release|x64
 		{745EB4A0-E6AD-462D-9728-D1553E741E8E}.Release|x86.ActiveCfg = Release|Win32
 		{745EB4A0-E6AD-462D-9728-D1553E741E8E}.Release|x86.Build.0 = Release|Win32
+		{503665E7-9183-4E6C-A823-9421519A5A82}.Debug|x64.ActiveCfg = Debug|x64
+		{503665E7-9183-4E6C-A823-9421519A5A82}.Debug|x64.Build.0 = Debug|x64
+		{503665E7-9183-4E6C-A823-9421519A5A82}.Debug|x86.ActiveCfg = Debug|Win32
+		{503665E7-9183-4E6C-A823-9421519A5A82}.Debug|x86.Build.0 = Debug|Win32
+		{503665E7-9183-4E6C-A823-9421519A5A82}.Release|x64.ActiveCfg = Release|x64
+		{503665E7-9183-4E6C-A823-9421519A5A82}.Release|x64.Build.0 = Release|x64
+		{503665E7-9183-4E6C-A823-9421519A5A82}.Release|x86.ActiveCfg = Release|Win32
+		{503665E7-9183-4E6C-A823-9421519A5A82}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

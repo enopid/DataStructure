@@ -1,60 +1,40 @@
-#include "MyVector.cpp"
+#include "TestCases.h"
+#include "utility.h"
+#include <iostream>
+#include <vector>
+int main(){
+    int step = 1000;
+    int iteration = 100;
 
-void TestGeometricGrowth(){
-    MyVector<int> myvector = MyVector<int>();
-    std::cout << "Vector geometric growth check" <<"\n";
-    myvector.print(false);
-    for (size_t i = 0; i < 100; i++)
-    {
-        myvector.push_back(i);
-        if (i%10==0){
-            std::cout << "After pushing back " << i <<"\n";
-            myvector.print(false);
-        }
-    }
-    std::cout <<"\n";
-}
+    //check well function
+    TestGeometricGrowth();
+    TestSizeManipulation();
 
-void TestSizeManipulation(){
-    std::cout << "Vector size manipulation check" <<"\n";
-    MyVector<int> myvector = MyVector<int>(10,5);
-    myvector.print();
-    std::cout << "Resize to 5" <<"\n";
-    myvector.resize(5);
-    myvector.print();
-    std::cout << "Resize to 10" <<"\n";
-    myvector.resize(10);
-    myvector.print();
-    std::cout << "Resize to 15 with 3" <<"\n";
-    myvector.resize(15,3);
-    myvector.print();
-    std::cout << "Reserve to 20" <<"\n";
-    myvector.reserve(20);
-    myvector.print();
-    std::cout << "fit vector capacity" <<"\n";
-    myvector.shrink_to_fit();
-    myvector.print();
-    std::cout << "clear" <<"\n";
-    myvector.clear();
-    myvector.print();
-}
+    //check special case for comparsion
+    //Utility::benchmarkToFile(TestSizeManipulation1, step, iteration, "LinearCase.csv");
+    //Utility::benchmarkToFile(TestSizeManipulation3, step, iteration, "ReserveFirstCase.csv");
 
-void TestSizeManipulation1(int n){
-    std::cout << "Vector linear growth" <<"\n";
-    MyVector<int> myvector = MyVector<int>();
-    for (size_t i = 0; i < n; i++) myvector.linear_push_back(i);
-}
+    //
+    MyVector<int>::set_growth_factor(1.5);
+    Utility::benchmarkToFile(TestSizeManipulation2, step, iteration, "ExpCase_1_5.csv");
 
-void TestSizeManipulation2(int n){
-    std::cout << "Vector exponential growth" <<"\n";
-    MyVector<int> myvector = MyVector<int>();
-    for (size_t i = 0; i < n; i++) myvector.push_back(i);
-}
+    MyVector<int>::set_growth_factor(1.5);
+    Utility::benchmarkToFile(TestSizeManipulation2, step, iteration, "ExpCase_1_5.csv");
+    MyVector<int>::set_growth_factor(2);
+    Utility::benchmarkToFile(TestSizeManipulation2, step, iteration, "ExpCase_2.csv");
+    MyVector<int>::set_growth_factor(3);
+    Utility::benchmarkToFile(TestSizeManipulation2, step, iteration, "ExpCase_3.csv");
+    MyVector<int>::set_growth_factor(4);
+    Utility::benchmarkToFile(TestSizeManipulation2, step, iteration, "ExpCase_4.csv");
+    MyVector<int>::set_growth_factor(5);
+    Utility::benchmarkToFile(TestSizeManipulation2, step, iteration, "ExpCase_5.csv");
 
+    //compare with stl::vector library
+    Utility::benchmarkToFile(TestSizeManipulation4, step, iteration, "vecExpCase.csv");
+    Utility::benchmarkToFile(TestSizeManipulation5, step, iteration, "vecReserveFirstCase.csv");
+    TestCapacityCheck1(step*iteration, true);
+    MyVector<int>::set_growth_factor(1.5);
+    TestCapacityCheck2(step * iteration, true);
 
-void TestSizeManipulation3(int n){
-    std::cout << "Vector reserve first" <<"\n";
-    MyVector<int> myvector = MyVector<int>();
-    myvector.reserve(n);
-    for (size_t i = 0; i < n; i++) myvector[i]=i;
+    return 0;
 }
